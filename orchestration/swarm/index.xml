@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Swarm on Docker et Orchestration</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/</link><description>Recent content in Swarm on Docker et Orchestration</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Mon, 15 Jun 2020 21:37:57 +0200</lastBuildDate><atom:link href="https://zaggash.github.io/tp-iut-docker/orchestration/swarm/index.xml" rel="self" type="application/rss+xml"/><item><title>Créer son cluster Swarm</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/create_swarm/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/create_swarm/</guid><description>Activation Swarm n&amp;rsquo;est pas actif par defaut dans Docker.
+Essayer la commande suivante:
+$ docker node ls Le premier noeud d&amp;rsquo;un cluster Swarm est initialiser avec docker swarm init
+Ne pas executer docker swarm init sur tous les noeuds !
+Vous auriez plusieurs clusters différents.
+Pour commencer il faut bien nommer ses machines.
+Vérifier que les VMs ont bien 3 noms distincts, sinon renommer les !
+$ sudo hostnamectl set-hostname node1 $ sudo hostnamectl set-hostname node2 $ sudo hostnamectl set-hostname node3 Puis vérifier qu&amp;rsquo;ils sont bien synchroniser à un serveur de temps</description></item><item><title>Créer un service</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/create_service/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/create_service/</guid><description>Pour les besoins du TP, on va garder un manager et 2 workers.
+Les applications ne sont pas critiques et nous sommes en mode POC.
+On va donc ne garder que node1 en tant que manager.
+Executer la commande suivante sur node1 :
+$ docker node demote node2
+$ docker node demote node3
+ Lancer le service On lance un service avec la commande docker service create ..., on peux faire l&amp;rsquo;analogie avec docker run .</description></item><item><title>Le reseau Ingress Overlay</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/</guid><description/></item></channel></rss>
