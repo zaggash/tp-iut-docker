@@ -11,13 +11,13 @@ On va donc ne garder que node1 en tant que manager.
 Executer la commande suivante sur node1 :
 $ docker node demote node2
 $ docker node demote node3
- Lancer le service On lance un service avec la commande docker service create ..., on peut faire l&amp;rsquo;analogie avec docker run .</description></item><item><title>Le réseau Ingress Overlay</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/</guid><description>Pour commencer cette partie, nous allons suprimer le service demo
+ Lancer le service On lance un service avec la commande docker service create ..., on peut faire l&amp;rsquo;analogie avec docker run .</description></item><item><title>Le réseau Ingress Overlay</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/</guid><description>Pour commencer cette partie, nous allons supprimer le service demo
 docker service rm demo
-Swarm et les Overlay Nous venons de deployer une aplication sur le cluster et l&amp;rsquo;on a vu que le port du service est disponible sur tous les noeuds.
-Cela est possible gràce au réseau par defaut de Swarm, appelé ingress.
-$ docker network ls NETWORK ID NAME DRIVER SCOPE 6b141a0943ca bridge bridge local bfc621566968 docker_gwbridge bridge local 6dbb4bea0e35 host host local 1b6ek4sxqg9g ingress overlay swarm 797221e77f12 none null local C&amp;rsquo;est un réseau overlay installé de base, et necessaire pour les flux entrant.</description></item><item><title>Retour sur notre Application</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/multi_services_app/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/multi_services_app/</guid><description>Pour commencer cette partie, on fait le ménage.
+Swarm et les Overlay Nous venons de déployer une application sur le cluster et l&amp;rsquo;on a vu que le port du service est disponible sur tous les noeuds.
+Cela est possible grâce au réseau par défaut de Swarm, appelé ingress.
+$ docker network ls NETWORK ID NAME DRIVER SCOPE 6b141a0943ca bridge bridge local bfc621566968 docker_gwbridge bridge local 6dbb4bea0e35 host host local 1b6ek4sxqg9g ingress overlay swarm 797221e77f12 none null local C&amp;rsquo;est un réseau overlay installé de base, et nécessaire pour les flux entrant.</description></item><item><title>Retour sur notre Application</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/multi_services_app/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/swarm/multi_services_app/</guid><description>Pour commencer cette partie, on fait le ménage.
 docker service rm $(docker service ls -q)
 Nous allons maintenant reprendre l&amp;rsquo;application Dockercoin et la faire tourner dans notre cluster.
-Nous allons construire les images, les envoyer sur le hub, puis les executer dans le cluster.
+Nous allons construire les images, les envoyer sur le hub, puis les exécuter dans le cluster.
 Ici nous sommes obligé d&amp;rsquo;envoyer les images dans un registry.
 Avec la commande docker-compose up, toutes les images de nos services sont construite en local.</description></item></channel></rss>
