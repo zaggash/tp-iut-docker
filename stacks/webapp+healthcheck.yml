@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  web:
+    image: zaggash/demo-webapp:v2
+    ports:
+      - "1234:80"
+    deploy:
+      replicas: 10
+      update_config:
+        delay: 5s
+        failure_action: rollback
+        max_failure_ratio: .5
+        monitor: 5s
+        parallelism: 1

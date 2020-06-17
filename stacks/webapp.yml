@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   web:
-    image: zaggash/demo-webapp
+    image: zaggash/demo-webapp:v1
     ports:
       - "1234:80"
 
