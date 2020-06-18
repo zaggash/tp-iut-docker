@@ -11,4 +11,4 @@ Elles sont directement dans l&amp;rsquo;espace de nom racine.
 Ce sont généralement des images de tiers reconnues.
 https://hub.docker.com Les images d&amp;rsquo;utilisateurs (ou d&amp;rsquo;organisations)
 zaggash/random L&amp;rsquo;espace de nom utilisateur contient les images des utilisateurs ou organisations.</description></item><item><title>[Optionel] Github</title><link>https://zaggash.github.io/tp-iut-docker/image_automation/github/</link><pubDate>Fri, 12 Jun 2020 23:23:40 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/image_automation/github/</guid><description>Pour aller plus loin&amp;hellip; Si vous le sentez, vous pouvez créer un repo sur Gihub pour pousser votre Dockerfile créé précédemment.
-Puis configurer un build automatique de votre Dockerfile gràace au DockerHub.</description></item></channel></rss>
+Puis configurer un build automatique de votre Dockerfile grâce au DockerHub.</description></item></channel></rss>
