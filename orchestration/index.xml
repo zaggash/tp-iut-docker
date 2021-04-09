@@ -5,7 +5,7 @@ $ latest=$(curl -sL &amp;#34;https://api.github.com/repos/docker/compose/release
 Nous allons utiliser l&amp;rsquo;application dockercoins pour essayer Docker Compose.
 J&amp;rsquo;ai préparé l&amp;rsquo;application dans le repo du TP.
 Vous pouvez récupérer le repo sur la machine en clonant le repo git du TP.
-$ git clone https://github.com/zaggash/tp-iut-docker.git $ cd dockercoins/ On ne va pas rentrer dans trop de details concernant la syntaxe d&amp;rsquo;un docker-compose.yaml.
+$ git clone https://github.com/zaggash/tp-iut-docker.git $ cd tp-iut-docker/ $ cd dockercoins/ On ne va pas rentrer dans trop de details concernant la syntaxe d&amp;rsquo;un docker-compose.yaml.
 Cela prendrait beaucoup de temps et la documentation de Docker est un bien meilleur référentiel avec un tas d&amp;rsquo;exemples et d&amp;rsquo;explications.</description></item><item><title>Les Stacks</title><link>https://zaggash.github.io/tp-iut-docker/orchestration/stacks/</link><pubDate>Mon, 15 Jun 2020 21:37:57 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/orchestration/stacks/</guid><description>docker-compose est bien pour le développement en locale.
 Il existe plusieurs versions de compose-file : https://docs.docker.com/compose/compose-file/ A partir de la version 3, les compose-file.yaml peuvent être utilisé pour les déploiements dans Swarm.
 On déploie un compose-file dans swarm avec la commande docker stack deploy -c &amp;lt;mon_compose.yaml&amp;gt; &amp;lt;nom_de_ma_stack&amp;gt;
