@@ -1,0 +1,3 @@
+# hugo default build
+website/public
+website/.hugo_build.lock

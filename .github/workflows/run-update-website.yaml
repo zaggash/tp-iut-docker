@@ -1,0 +1,19 @@
+name: Update Doc
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/run-update-website.yaml"
+      - "website/**"
+
+jobs:
+  gh-pages:
+    name: Rebuild Doc
+    uses: zaggash/gh-workflows/.github/workflows/action_tp-docker-gh-pages.yaml@main
+    secrets:
+      app_id: ${{ secrets.ZAGGBOT_APP_ID }}
+      app_private_key: ${{ secrets.ZAGGBOT_APP_PRIVATE_KEY }}
+  
