@@ -1,0 +1,187 @@
+<!doctype html><html lang=fr class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.110.0"><meta name=description content="TP Licence - Intro aux conteneurs"><meta name=author content="Alexandre P."><link rel=icon href=https://zaggash.github.io/tp-iut-docker/images/favicon.png type=image/png><title>Dans le Réseau :: Docker et Orchestration</title><link href=https://zaggash.github.io/tp-iut-docker/css/nucleus.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/fontawesome-all.min.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/hybrid.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/featherlight.min.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/perfect-scrollbar.min.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/auto-complete.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/atom-one-dark-reasonable.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/theme.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/tabs.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/hugo-theme.css?1675558998 rel=stylesheet><link href=https://zaggash.github.io/tp-iut-docker/css/theme-blue.css?1675558998 rel=stylesheet><script src=https://zaggash.github.io/tp-iut-docker/js/jquery-3.3.1.min.js?1675558998></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=https://zaggash.github.io/tp-iut-docker/docker_linux/networks/inside_network/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://zaggash.github.io/tp-iut-docker/><img src=https://www.docker.com/assets/logo-files/Docker-Logo-White-RGB_Horizontal.png alt="Moby Logo"></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Rechercher...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://zaggash.github.io/tp-iut-docker/js/lunr.min.js?1675558998></script>
+<script type=text/javascript src=https://zaggash.github.io/tp-iut-docker/js/auto-complete.js?1675558998></script>
+<script type=text/javascript>var baseurl="https://zaggash.github.io/tp-iut-docker/"</script><script type=text/javascript src=https://zaggash.github.io/tp-iut-docker/js/search.js?1675558998></script></div><section id=homelinks><ul><li><a class=padding href=https://zaggash.github.io/tp-iut-docker/><i class='fas fa-home'></i> Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/introduction/ title=Introduction class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/><b>1. </b>Introduction
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/introduction/why_docker/ title="Pourquoi docker ?" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/why_docker/>Pourquoi docker ?
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/introduction/why_docker/complex_deployments/ title="Deploiements complexes" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/why_docker/complex_deployments/>Deploiements complexes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/why_docker/easier_deployments/ title="Deploiements simplifiés" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/why_docker/easier_deployments/>Deploiements simplifiés
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/why_docker/before_docker/ title="Avant Docker" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/why_docker/before_docker/>Avant Docker
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/why_docker/after_docker/ title="Après Docker" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/why_docker/after_docker/>Après Docker
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/why_docker/vm_container/ title="Alors, VM ou Conteneur ?" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/why_docker/vm_container/>Alors, VM ou Conteneur ?
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/introduction/architecture/ title=Architecture class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/architecture/>Architecture
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/introduction/architecture/internal_architecture/ title="Docker Engine" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/architecture/internal_architecture/>Docker Engine
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/architecture/namespaces_cgroups/ title=Namespaces/Cgroups/CoW class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/architecture/namespaces_cgroups/>Namespaces/Cgroups/CoW
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/introduction/install_docker/ title="Installer Docker" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/introduction/install_docker/>Installer Docker
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/docker/ title=Docker class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/><b>2. </b>Docker
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/docker/work_with_container/ title="Travailler avec les conteneurs" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/work_with_container/>Travailler avec les conteneurs
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/docker/work_with_container/background/ title="Conteneurs en arrière-plan" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/work_with_container/background/>Conteneurs en arrière-plan
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/docker/work_with_images/ title="Travailler avec les images" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/work_with_images/>Travailler avec les images
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/docker/work_with_images/image_vs_container/ title="Image vs Conteneur" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/work_with_images/image_vs_container/>Image vs Conteneur
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/docker/work_with_images/interactive_image/ title="Création Image Interactive" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/work_with_images/interactive_image/>Création Image Interactive
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/docker/copy_on_write/ title=Copy-On-Write class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker/copy_on_write/>Copy-On-Write
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/image_automation/ title="Automatisation d'une image" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/image_automation/><b>3. </b>Automatisation d'une image
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/image_automation/dockerfile/ title="Le Dockerfile" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/image_automation/dockerfile/>Le Dockerfile
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/image_automation/dockerhub/ title="Le Docker Hub" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/image_automation/dockerhub/>Le Docker Hub
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/image_automation/github/ title="[Optionel] Github" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/image_automation/github/>[Optionel] Github
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/docker_linux/ title="Docker et Linux" class="dd-item
+parent"><a href=https://zaggash.github.io/tp-iut-docker/docker_linux/><b>4. </b>Docker et Linux
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/docker_linux/namespaces/ title="Les Namespaces" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker_linux/namespaces/>Les Namespaces
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/docker_linux/networks/ title="Les Réseaux" class="dd-item
+parent"><a href=https://zaggash.github.io/tp-iut-docker/docker_linux/networks/>Les Réseaux
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/docker_linux/networks/network_driver/ title="Les Pilotes Réseau" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker_linux/networks/network_driver/>Les Pilotes Réseau
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/docker_linux/networks/inside_network/ title="Dans le Réseau" class="dd-item active"><a href=https://zaggash.github.io/tp-iut-docker/docker_linux/networks/inside_network/>Dans le Réseau
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/docker_linux/volumes/ title="Les Volumes" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/docker_linux/volumes/>Les Volumes
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/orchestration/ title=Orchestration class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/><b>5. </b>Orchestration
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/orchestration/install-compose/ title="Installer docker-compose" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/install-compose/>Installer docker-compose
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/orchestration/compose-app/ title="Une app Docker Compose" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/compose-app/>Une app Docker Compose
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/orchestration/swarm/ title=Swarm class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/swarm/>Swarm
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/orchestration/swarm/create_swarm/ title="Créer son cluster Swarm" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/swarm/create_swarm/>Créer son cluster Swarm
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/orchestration/swarm/create_service/ title="Créer un service" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/swarm/create_service/>Créer un service
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/orchestration/swarm/ingress_overlay/ title="Le réseau Ingress Overlay" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/swarm/ingress_overlay/>Le réseau Ingress Overlay
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/orchestration/swarm/multi_services_app/ title="Retour sur notre Application" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/swarm/multi_services_app/>Retour sur notre Application
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/orchestration/stacks/ title="Les Stacks" class=dd-item><a href=https://zaggash.github.io/tp-iut-docker/orchestration/stacks/>Les Stacks
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>Aller plus loin</h3><ul><li><a class=padding href=https://docs.docker.com/><i class="fas fa-book"></i> Documentation Docker</a></li><li><a class=padding href=https://hub.docker.com/><i class="fab fa-docker"></i> Docker Hub</a></li><li><a class=padding href=https://github.com/zaggash/tp-iut-docker><i class="fab fa-github"></i> Dépôt du TP</a></li><li><a class=padding href=https://www.linkedin.com/in/alexandre-pinon/><i class="fab fa-linkedin"></i> Profil Linkedin</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Supprimer l'historique</a></li></ul></section><section id=footer><center><img alt="Drone (self-hosted) with branch" src="https://img.shields.io/drone/build/zaggash/tp-iut-docker_website/master?label=Website&server=https%3A%2F%2Fci.ziggzagg.fr&style=plastic"><p>Créé pour l'IUT Reims-Chalons-Charleville - Alexandre P.</p></center></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=https://zaggash.github.io/tp-iut-docker/>Home</a> > <a href=https://zaggash.github.io/tp-iut-docker/docker_linux/>Docker et Linux</a> > <a href=https://zaggash.github.io/tp-iut-docker/docker_linux/networks/>Les Réseaux</a> > Dans le Réseau</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li><a href=#un-réseau-deux-conteneurs>Un réseau, deux conteneurs</a></li><li><a href=#on-peut-aller-un-peu-plus-loin>On peut aller un peu plus loin</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Dans le Réseau</h1><p>On peut lister les réseaux avec <code>docker network ls</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker network ls
+</span></span><span style=display:flex><span>NETWORK ID          NAME                DRIVER              SCOPE
+</span></span><span style=display:flex><span>a5fa804dcca5        bridge              bridge              local
+</span></span><span style=display:flex><span>a5a200b4762b        host                host                local
+</span></span><span style=display:flex><span>b35f65ab844b        none                null                local
+</span></span></code></pre></div><p>On peut considérer un réseau comme un Virtual Switch.<br>Docker va lui assigner automatiquement un sous-réseau puis une IP aux conteneurs associés.<br>Les conteneurs peuvent faire partis de plusieurs réseaux à la fois.<br>Les noms des conteneurs sont résolus via un serveur DNS embarqué dans le Docker daemon.</p><p>Il existe aussi un driver multi-hôtes utilisé lors de la mise en cluster de plusieurs machines (un <em><strong>Cluster Swarm</strong></em>)<br>Ce driver, appelé <em><strong>overlay</strong></em> fonctionne au travers de lien VXLAN.
+Nous reviendrons sur celui-ci un peu plus tard.</p><h3 id=un-réseau-deux-conteneurs>Un réseau, deux conteneurs</h3><p><img src="https://zaggash.github.io/tp-iut-docker/images/bridge2.png?featherlight=false&width=40pc" alt="Single Network Diagram"></p><p>Créer un réseau <code>devops</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker network create devops
+</span></span><span style=display:flex><span>8a5841273868138b581a8c663e9a042f181a1a52c0028c21988ffd474c117610
+</span></span></code></pre></div><p>Vous pouvez le voir avec <code>docker network ls</code></p><p>Maintenant, lancer un conteneur sur ce réseau et donnez lui un <em>nom</em> reconnaissable.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker run -d --name AppDev --net devops hashicorp/http-echo -text <span style=color:#e6db74>&#34;Mon AppDev&#34;</span>
+</span></span></code></pre></div><p>Maintenant, lancer un autre conteneur dans ce même réseau et lancer un ping vers votre premier conteneur <code>AppDev</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker run -ti --net devops alpine sh
+</span></span><span style=display:flex><span>/ <span style=color:#75715e># ping appdev</span>
+</span></span></code></pre></div><p><img src="https://zaggash.github.io/tp-iut-docker/images/magic.gif?featherlight=false&width=20pc" alt=Magic></p><hr><p>On peut inspecter le réseau avec <code>docker inspect devops</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker inspect devops
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;devops&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Id&#34;</span>: <span style=color:#e6db74>&#34;8be916360cbc400758d107e47e02a9890d37da0fe3cb0a3a11acde60173a03de&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Created&#34;</span>: <span style=color:#e6db74>&#34;2020-06-14T01:49:07.632816857Z&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Scope&#34;</span>: <span style=color:#e6db74>&#34;local&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Driver&#34;</span>: <span style=color:#e6db74>&#34;bridge&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;EnableIPv6&#34;</span>: false,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;IPAM&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;Driver&#34;</span>: <span style=color:#e6db74>&#34;default&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;Options&#34;</span>: <span style=color:#f92672>{}</span>,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;Config&#34;</span>: <span style=color:#f92672>[</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                    <span style=color:#e6db74>&#34;Subnet&#34;</span>: <span style=color:#e6db74>&#34;172.20.0.0/16&#34;</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Internal&#34;</span>: false,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Attachable&#34;</span>: false,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Ingress&#34;</span>: false,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;ConfigFrom&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;Network&#34;</span>: <span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;ConfigOnly&#34;</span>: false,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Containers&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#34;2496236a9109045a1cfb17cd237e84208fe2b3fee7b861e212aeaf7bce9bf61c&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;Name&#34;</span>: <span style=color:#e6db74>&#34;AppDev&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;EndpointID&#34;</span>: <span style=color:#e6db74>&#34;19a945be9b13b373dc49c840c9871bfa60ed7bfba163c7a93e763b7f016102dc&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;MacAddress&#34;</span>: <span style=color:#e6db74>&#34;02:42:ac:14:00:02&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;IPv4Address&#34;</span>: <span style=color:#e6db74>&#34;172.20.0.2/16&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;IPv6Address&#34;</span>: <span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Options&#34;</span>: <span style=color:#f92672>{}</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Labels&#34;</span>: <span style=color:#f92672>{}</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>]</span>
+</span></span></code></pre></div><p>Dans mon cas on peut voir que <code>devops</code> à un sous réseau en <em><strong>172.20.0.0/16</strong></em><br>Puis la définition de mon conteneur avec l&rsquo;IP <em><strong>172.20.0.2/16</strong></em></p><p>Maintenant sur la VM, lister les interfaces réseau</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ ip a
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>...<span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>262: br-8be916360cbc: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue state UP group default
+</span></span><span style=display:flex><span>    link/ether 02:42:f3:81:04:97 brd ff:ff:ff:ff:ff:ff
+</span></span><span style=display:flex><span>    inet 172.20.0.1/16 brd 172.20.255.255 scope global br-8be916360cbc
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>    inet6 fe80::42:f3ff:fe81:497/64 scope link
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>264: vethcbea7f9@if263: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue master br-8be916360cbc state UP group default
+</span></span><span style=display:flex><span>    link/ether 96:56:cf:87:0d:3d brd ff:ff:ff:ff:ff:ff link-netnsid <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    inet6 fe80::9456:cfff:fe87:d3d/64 scope link
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span></code></pre></div><p>Vous pouvez voir les interfaces de la VM, le bridge docker0.<br>Puis deux interfaces <strong>br-8be916360cbc</strong>, <strong>vethcbea7f9@if263</strong> qui sont le bridge du réseau <code>devops</code> et l&rsquo;interface veth du conteneur coté VM.</p><p>On peut voir ça aussi avec <code>brctl</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ brctl show
+</span></span><span style=display:flex><span>bridge name	        bridge id		    STP enabled	    interfaces
+</span></span><span style=display:flex><span>br-8be916360cbc		8000.0242f3810497	no		        veth1eecb09
+</span></span><span style=display:flex><span>docker0		        8000.02422beae43c	no		
+</span></span></code></pre></div><h3 id=on-peut-aller-un-peu-plus-loin>On peut aller un peu plus loin</h3><p>Créér un deuxième réseau <code>prod</code><br>Lancer un conteneur dans ce réseau <code>prod</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker run -d --name AppProd hashicorp/http-echo -text <span style=color:#e6db74>&#34;Production&#34;</span>
+</span></span></code></pre></div><p>Obtenir l&rsquo;IP de AppDev et AppProd</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ docker run --rm --net container:AppDev alpine ip a
+</span></span><span style=display:flex><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>65536</span> qdisc noqueue state UNKNOWN qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style=display:flex><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>265: eth0@if266: &lt;BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue state UP
+</span></span><span style=display:flex><span>    link/ether 02:42:ac:14:00:02 brd ff:ff:ff:ff:ff:ff
+</span></span><span style=display:flex><span>    inet 172.20.0.2/16 brd 172.20.255.255 scope global eth0
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ docker run --rm --net container:AppProd alpine ip a
+</span></span><span style=display:flex><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>65536</span> qdisc noqueue state UNKNOWN qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style=display:flex><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>268: eth0@if269: &lt;BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue state UP
+</span></span><span style=display:flex><span>    link/ether 02:42:ac:18:00:02 brd ff:ff:ff:ff:ff:ff
+</span></span><span style=display:flex><span>    inet 172.24.0.2/16 brd 172.24.255.255 scope global eth0
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span></code></pre></div><p>On a donc AppDev : 172.20.0.2/16
+et AppProd : 172.24.0.2/16</p><div class="notices warning"><p>Essayer de pinger AppProd à partir du <em>namespace réseau</em> de AppDev (<code>--net container:AppDev</code>) avec un conteneur alpine.<br>Que se passe t-il ?</p></div><p>On a vu que Docker est lié au Kernel, nous allons très simplement connecter AppDev et AppProd sans passer par Docker.<br>Nous allons créer une paire de Veth, puis connecter un bout au bridge <code>devops</code> et un autre dans le namespace du conteneur <code>AppProd</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># On crée la paire de veth</span>
+</span></span><span style=display:flex><span>$ sudo ip link add name int_hote type veth peer name int_conteneur
+</span></span><span style=display:flex><span><span style=color:#75715e># On associe in_hote au bridge</span>
+</span></span><span style=display:flex><span>$ sudo ip link set int_hote master br-8be916360cbc up
+</span></span><span style=display:flex><span><span style=color:#75715e># On voit nos interfaces dans la VM</span>
+</span></span><span style=display:flex><span>$ ip a | grep int
+</span></span><span style=display:flex><span>270: int_conteneur@int_hote: &lt;BROADCAST,MULTICAST&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noop state DOWN group default qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>271: int_hote@int_conteneur: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP,M-DOWN&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue master br-8be916360cbc state LOWERLAYERDOWN group default qlen <span style=color:#ae81ff>1000</span>
+</span></span></code></pre></div><p>Il nous faut trouver le pid de <code>AppProd</code> pour associer l&rsquo;autre veth à son network namespace</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ ps ax | grep <span style=color:#e6db74>&#39;Production&#39;</span>
+</span></span><span style=display:flex><span> <span style=color:#ae81ff>3146</span> ?        Ssl    0:00 /http-echo -text Production
+</span></span></code></pre></div><p>Le PID est le <strong>3146</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ ip link set int_conteneur netns <span style=color:#ae81ff>3146</span>
+</span></span></code></pre></div><p>On va utiliser la commande <code>nsenter</code> pour se balader dans les namespaces.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ nsenter -n -u -t <span style=color:#ae81ff>3146</span>
+</span></span><span style=display:flex><span>root@69421ba25609:~# ip a
+</span></span><span style=display:flex><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>65536</span> qdisc noqueue state UNKNOWN group default qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style=display:flex><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>268: eth0@if269: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue state UP group default
+</span></span><span style=display:flex><span>    link/ether 02:42:ac:18:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    inet 172.24.0.2/16 brd 172.24.255.255 scope global eth0
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>270: int_conteneur@if271: &lt;BROADCAST,MULTICAST&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noop state DOWN group default qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>    link/ether 26:d7:1f:f9:fb:77 brd ff:ff:ff:ff:ff:ff link-netnsid <span style=color:#ae81ff>0</span>
+</span></span></code></pre></div><p>Maintenant on configure l&rsquo;interface dans le conteneur AppProd.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>root@69421ba25609:~# ip link set int_conteneur name eth1 up
+</span></span><span style=display:flex><span>root@69421ba25609:~# ip a
+</span></span><span style=display:flex><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>65536</span> qdisc noqueue state UNKNOWN group default qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style=display:flex><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>268: eth0@if269: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue state UP group default
+</span></span><span style=display:flex><span>    link/ether 02:42:ac:18:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    inet 172.24.0.2/16 brd 172.24.255.255 scope global eth0
+</span></span><span style=display:flex><span>       valid_lft forever preferred_lft forever
+</span></span><span style=display:flex><span>270: eth1@if271: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style=color:#ae81ff>1500</span> qdisc noqueue state UP group default qlen <span style=color:#ae81ff>1000</span>
+</span></span><span style=display:flex><span>    link/ether 26:d7:1f:f9:fb:77 brd ff:ff:ff:ff:ff:ff link-netnsid <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Rappel, le sous réseau devops est 172.20.0.0/16</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># On va prendre un IP dans ce réseau : 172.20.0.100/16</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>root@69421ba25609:~# ip addr add 172.20.0.100/16 dev eth1
+</span></span><span style=display:flex><span>root@69421ba25609:~# ip route add default via 172.20.0.1
+</span></span></code></pre></div><div class="notices warning"><p>Essayer maintenant à nouveau de pinger AppProd à partir de AppDev.<br>Connectez vous au namespace avec nsenter pour jouer avec ;)
+Que se passe t-il ?</p></div><div class="notices warning"><p>Supprimer maintenant les deux conteneurs.<br>Observer les interfaces réseau au niveau de la VM.</p></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=https://zaggash.github.io/tp-iut-docker/docker_linux/networks/network_driver/ title="Les Pilotes Réseau"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=https://zaggash.github.io/tp-iut-docker/docker_linux/volumes/ title="Les Volumes" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://zaggash.github.io/tp-iut-docker/js/clipboard.min.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/perfect-scrollbar.min.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/perfect-scrollbar.jquery.min.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/jquery.sticky.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/featherlight.min.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/highlight.pack.js?1675558998></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=https://zaggash.github.io/tp-iut-docker/js/modernizr.custom-3.6.0.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/learn.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/js/hugo-learn.js?1675558998></script>
+<script src=https://zaggash.github.io/tp-iut-docker/mermaid/mermaid.js?1675558998></script>
+<script>mermaid.initialize({startOnLoad:!0})</script></body></html>

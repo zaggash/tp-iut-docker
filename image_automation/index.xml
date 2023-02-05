@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automatisation d'une image on Docker et Orchestration</title><link>https://zaggash.github.io/tp-iut-docker/image_automation/</link><description>Recent content in Automatisation d'une image on Docker et Orchestration</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Fri, 12 Jun 2020 23:19:48 +0200</lastBuildDate><atom:link href="https://zaggash.github.io/tp-iut-docker/image_automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Le Dockerfile</title><link>https://zaggash.github.io/tp-iut-docker/image_automation/dockerfile/</link><pubDate>Fri, 12 Jun 2020 23:23:40 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/image_automation/dockerfile/</guid><description>Un Quoi ? Le dockerfile est en gros la recette pour créer une image Docker.
+Il contient toutes les instructions pour indiquer au daemon quoi faire et comment doit être construite notre image.
+La commande à utiliser est docker build
+Notre premier Dockerfile Vous pouvez utiliser la commande suivante pour nettoyer votre environnement docker du travail précédent.
+docker rm -f $(docker ps -q); docker system prune -af --volumes
+Ces commandes suppriment les conteneurs actifs puis les volumes/images/conteneurs inactifs</description></item><item><title>Le Docker Hub</title><link>https://zaggash.github.io/tp-iut-docker/image_automation/dockerhub/</link><pubDate>Fri, 12 Jun 2020 23:23:40 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/image_automation/dockerhub/</guid><description>Le Nommage Les images docker doivent respecter un certain schema de nommage pour être partager dans un registry.
+Il y a 3 espaces de noms:
+Les images officielles
+alpine, ubuntu, python Les images officielles sont selectionées par Docker.
+Elles sont directement dans l&amp;rsquo;espace de nom racine.
+Ce sont généralement des images de tiers reconnues.
+https://hub.docker.com Les images d&amp;rsquo;utilisateurs (ou d&amp;rsquo;organisations)
+zaggash/random L&amp;rsquo;espace de nom utilisateur contient les images des utilisateurs ou organisations.</description></item><item><title>[Optionel] Github</title><link>https://zaggash.github.io/tp-iut-docker/image_automation/github/</link><pubDate>Fri, 12 Jun 2020 23:23:40 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/image_automation/github/</guid><description>Pour aller plus loin&amp;hellip; Si vous le sentez, vous pouvez créer un repo sur Gihub pour pousser votre Dockerfile créé précédemment.
+Puis configurer un build automatique de votre Dockerfile grâce au DockerHub.</description></item></channel></rss>
