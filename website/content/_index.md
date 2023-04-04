@@ -16,6 +16,6 @@ Seule une sera utile jusqu'à la partie concernant l'orchestration.
 
 Ceci n'a pas pour but de tout expliquer sur les conteneurs, mais fait plutôt office d'introduction.
 
-![Docker](https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png?featherlight=false&width=20pc)
+![Docker](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png?featherlight=false&width=20pc)
 
 ***Amusez-vous !***
