@@ -140,7 +140,7 @@ Cela permet de garder le coté immuable d’un conteneur et de pouvoir le partag
 Information Nous verrons dans un prochain chapitre comment personnaliser une image !
 `,description:"",tags:null,title:"Travailler avec les conteneurs",uri:"/docker/work_with_container/"},{breadcrumb:"Home > Introduction",content:`Avant:
 application en un seul bloc Cycle de developpement long Un seul environnement de prod Scalabilitée lente Aujourd’hui:
-Architecture orientée microservices Mise a jour fréquente et rapide Environnement multiple Besoin de scalabilité rapide `,description:"",tags:null,title:"Pourquoi docker ?",uri:"/introduction/why_docker/"},{breadcrumb:"Home",content:`Partie 1 Introduction Introduction à docker et au concept de conteneurs.
+Architecture orientée microservices Mise a jour fréquente et rapide Environnement multiple Besoin de scalabilité rapide `,description:"",tags:null,title:"Pourquoi docker ?",uri:"/introduction/why_docker/"},{breadcrumb:"Home",content:`Introduction à docker et au concept de conteneurs.
 On ne lancera pas (tout de suite) de conteneur dans ce chapitre !
 `,description:"",tags:null,title:"Introduction",uri:"/introduction/"},{breadcrumb:"Home > Orchestration > Swarm",content:` Avertissement Pour les besoins du TP, on va garder un manager et 2 workers.
 Les applications ne sont pas critiques et nous sommes en mode POC.
@@ -313,7 +313,7 @@ Information Dans le prochain chapitre, nous allons apprendre à automatiser le b
 Les fichiers constituent le FileSystem de notre conteneur. les metadata peuvent être de différentes formes le créateur de l’image les variables d’environnement les commandes à executer Les images sont en fait une superposition de couches appelées layers
 Chaque layer ajoute, modifie ou supprime un fichier et/ou une metadata.
 Les images peuvent partager des layers, ce qui permet d’optimiser l’utilisation de l’espace disque, les transferts réseaux
-`,description:"",tags:null,title:"Travailler avec les images",uri:"/docker/work_with_images/"},{breadcrumb:"Home",content:`Partie 2 Docker Dans ce chapitre nous allons voir plusieurs types de conteneur.
+`,description:"",tags:null,title:"Travailler avec les images",uri:"/docker/work_with_images/"},{breadcrumb:"Home",content:`Dans ce chapitre nous allons voir plusieurs types de conteneur.
 Puis en apprendre un peu plus sur leurs fonctionnements.
 `,description:"",tags:null,title:"Docker",uri:"/docker/"},{breadcrumb:"Home > Introduction > Architecture",content:`Le Docker Engine est divisé en plusieurs parties.
 dockerd (REST API, authentification, réseaux, stockage) : Fait appel à containerd containerd (Gère la vie des conteneurs, push/pull les images) runc (Lance l’application du conteneur) containerd-shim (Par conteneur; permet de separer le processus et RunC) Plusieurs fonctionnalitées sont progressivement deleguées du Docker Engine à containerd
@@ -444,7 +444,7 @@ $ docker run -ti -v /tmp:/usr/share/nginx/html nginx bashEst ce que les fichiers
 $ ls /usr/share/nginx/htmlNon.
 Le contenu du dossier du conteneur à été remplacé avec le contenu du dossier de l’hôte.
 Les bind-mount sont utiles en mode développement car ils permettent, par exemple, de partager le code source de l’hôte avec le conteneur.
-`,description:"",tags:null,title:"Les Volumes",uri:"/docker_linux/volumes/"},{breadcrumb:"Home",content:`Chapter 3 L’automatisation de la création d’une image Dans ce chapître, nous allons utiliser les Dockerfile, puis faire un tour d’horizon du DockerHub.
+`,description:"",tags:null,title:"Les Volumes",uri:"/docker_linux/volumes/"},{breadcrumb:"Home",content:`Dans ce chapître, nous allons utiliser les Dockerfile, puis faire un tour d’horizon du DockerHub.
 `,description:"",tags:null,title:"Automatisation d'une image",uri:"/image_automation/"},{breadcrumb:"Home > Docker",content:`Le copy-on-write Le copy-on-write ( CoW ) permet de partager les layers des images entre les conteneurs.
 Dès que le conteneur à besoin d’ecrire dans un fichier existant dans une image, celui-ci est copié dans le layer en écriture du conteneur puis modifié.
 On retrouve ce principe dans les snapshots BTRFS, le provisioning VMwawre,…
@@ -568,24 +568,25 @@ rng Nous avions vu que le service rng était le point bloquant.
 Il nous faut maximiser l’entropie pour augmenter la génération de hash pour nos worker.
 Pour cela, on va lancer une instance du service rng sur chaque noeud.
 Swarmkit à prévu ce genre de déploiement, mais nous devons recréer le service, on ne peux pas activer/désactiver un deploiement globale.
-// On supprime le service $ docker service rm rng // Puis on le relance en activant l\\'ordonnancement global $ docker service create --name rng --network dockercoins --mode global \\ $REGISTRY/$USER_NAMESPACE/rng:$TAG`,description:"",tags:null,title:"Retour sur notre Application",uri:"/orchestration/swarm/multi_services_app/"},{breadcrumb:"Home",content:`Chapter 4 Docker et Linux Dans cette partie, nous allons voir comment Docker s’intègre avec linux au niveau réseau puis la gestion des volumes.
+// On supprime le service $ docker service rm rng // Puis on le relance en activant l\\'ordonnancement global $ docker service create --name rng --network dockercoins --mode global \\ $REGISTRY/$USER_NAMESPACE/rng:$TAG`,description:"",tags:null,title:"Retour sur notre Application",uri:"/orchestration/swarm/multi_services_app/"},{breadcrumb:"Home",content:`Dans cette partie, nous allons voir comment Docker s’intègre avec linux au niveau réseau puis la gestion des volumes.
 `,description:"",tags:null,title:"Docker et Linux",uri:"/docker_linux/"},{breadcrumb:"Home > Introduction > Pourquoi docker ?",content:`Les applications étaient principalement toutes installées sur des Machines Virtuelles.
 Certaines fois plusieurs applications partagent la même VM avec ses propres librairies, dépendances, fichiers de configurations…
 Les installations se sont ensuite automatisées avec Ansible, Chef, Puppet,… mais il est très facile de modifier un fichier directement sur la machine sans changer le template.
 Ce qui rend les environnements certaines fois non fiable.
 Les Ops et Dev n’ont pas forcement une manière simple de partager les applications.
 Les environnements varient ce qui crée des lenteurs et des frictions entre Dev et Ops.
-`,description:"",tags:null,title:"Avant Docker",uri:"/introduction/why_docker/before_docker/"},{breadcrumb:"Home",content:`Chapter 5 Orchestration Cette partie met en oeuvre l’ensemble de la stack de Docker.
+`,description:"",tags:null,title:"Avant Docker",uri:"/introduction/why_docker/before_docker/"},{breadcrumb:"Home",content:`Cette partie met en oeuvre l’ensemble de la stack de Docker.
 Nous allons utiliser docker-compose dans un premier temps. Puis mettre en oeuvre un cluster Swarm.
 `,description:"",tags:null,title:"Orchestration",uri:"/orchestration/"},{breadcrumb:"Home > Introduction > Pourquoi docker ?",content:`Les applications sont désormais deployées seules dans une image avec les dependances et configurations.
 Dev et Prod peuvent facilement echanger l’application et la deployer en Production.
 Les mises à jour ne neccessitent plus une reinstallation mais seulement un changement d’image.
 De la même maniere, il est désormais très simple de revenir à une version précédente.
-`,description:"",tags:null,title:"Après Docker",uri:"/introduction/why_docker/after_docker/"},{breadcrumb:"Home > Introduction > Pourquoi docker ?",content:`La plupart du temps, les conteneurs tournent dans des VMs.
+`,description:"",tags:null,title:"Après Docker",uri:"/introduction/why_docker/after_docker/"},{breadcrumb:"Home",content:`Pour aller plus loin, rendez-vous sur le TD Kubernetes !
+https://zaggash.github.io/tp-iut-kubernetes/ `,description:"",tags:null,title:"Kubernetes",uri:"/kubernetes/"},{breadcrumb:"Home > Introduction > Pourquoi docker ?",content:`La plupart du temps, les conteneurs tournent dans des VMs.
 Les applications profitent des bénéfices de la contenerisation et la flexibilité des VMs.
 Faire tourner des conteneurs dans une machine complétement physique ajoute des problématiques de scalabilitée.
 Il n’y a pas de vérité, tout est une question de besoin !
-VM Conteneur Lourd, dans l’ordre du Giga Léger, dans l’ordre du Mega Overhead de l’hyperviseur Performance native de l’hôte Chaque VMs à son propre OS Les conteneurs partagent l’OS de l’hôte Virtualisation Hardware Virtualisation de l’OS Démarrage dans l’ordre de la minute Démarrage de l’ordre de la milliseconde Isolation complète, donc plus sécrisée Isolation au niveau du processus, potentiellement moins sécurisée `,description:"",tags:null,title:"Alors, VM ou Conteneur ?",uri:"/introduction/why_docker/vm_container/"},{breadcrumb:"",content:`Home Ceci est un TP afin de découvrir Docker, les conteneurs et l’orchestration de conteneur.
+VM Conteneur Lourd, dans l’ordre du Giga Léger, dans l’ordre du Mega Overhead de l’hyperviseur Performance native de l’hôte Chaque VMs à son propre OS Les conteneurs partagent l’OS de l’hôte Virtualisation Hardware Virtualisation de l’OS Démarrage dans l’ordre de la minute Démarrage de l’ordre de la milliseconde Isolation complète, donc plus sécrisée Isolation au niveau du processus, potentiellement moins sécurisée `,description:"",tags:null,title:"Alors, VM ou Conteneur ?",uri:"/introduction/why_docker/vm_container/"},{breadcrumb:"",content:`Ceci est un TP afin de découvrir Docker, les conteneurs et l’orchestration de conteneur.
 J’ai essayé de mettre le plus d’informations possible dans les chapitres.
 N’hésitez à m’interpeller si vous rencontrez un problème, une erreur, ou avez besoin de plus d’explications.
 La documentation sur le site de Docker peut apporter une aide complémentaire.
