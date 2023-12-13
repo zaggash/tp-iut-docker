@@ -10,4 +10,4 @@ Cela prendrait beaucoup de temps et la documentation de Docker est un bien meill
 Il existe plusieurs versions de compose-file : https://docs.docker.com/compose/compose-file/ A partir de la version 3, les compose-file.yaml peuvent être utilisé pour les déploiements dans Swarm.
 On déploie un compose-file dans swarm avec la commande docker stack deploy -c &amp;lt;mon_compose.yaml&amp;gt; &amp;lt;nom_de_ma_stack&amp;gt;
 Dans cette version de compose, une section deploy est intégré est permet de configurer les déploiements.
-Une stack simple. En mode service sans la stack, on l&amp;rsquo;aurait déployé comme ceci docker service create --publish 1234:80 zaggash/demo-webapp</description></item></channel></rss>
+Une stack simple. En mode service sans la stack, on l&amp;rsquo;aurait déployé comme ceci docker service create --publish 1234:80 ghcr.</description></item></channel></rss>
