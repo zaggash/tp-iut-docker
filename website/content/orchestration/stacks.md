@@ -17,14 +17,14 @@ Dans cette version de compose, une section `deploy` est intégré est permet de 
 ### Une stack simple.  
 
 En mode service sans la stack, on l'aurait déployé comme ceci
-`docker service create --publish 1234:80 zaggash/demo-webapp`
+`docker service create --publish 1234:80 ghcr.io/zaggash/demo-webapp`
 
 Maintenant, on va déployer la stack suivante
 ```yaml
 version: "3.8"
 services:
   web:
-    image: zaggash/demo-webapp
+    image: ghcr.io/zaggash/demo-webapp
     ports:
       - "1234:80"
 ```
@@ -82,7 +82,7 @@ echo $(hostname -I) | tr ' ' '\n' >> /usr/share/nginx/html/index.html
 ```
 
 Vous pouvez ensuite construire l'image et la pousser vers votre compte DockerHub.  
-Sinon les images nécessaire existent déjà sur mon compte, ici `zaggash/demo-webapp:v2`  
+Sinon les images nécessaire existent déjà sur mon compte, ici `ghcr.io/zaggash/demo-webapp:v2`  
 ```bash
 $ docker build -t <votre_id_dockerhub>/demo-webapp:v2 .
 $ docker login
@@ -93,7 +93,7 @@ $ docker push <votre_id_dockerhub>/demo-webapp:v2
 On retourne dans le dossier `~/tp-iut-docker/stacks` et on modifie notre stack pour prendre en compte la nouvelle image.  
 ```yml
 [...]
-    image: zaggash/demo-webapp:v2
+    image: ghcr.io/zaggash/demo-webapp:v2
 [...]
 ```
 
@@ -113,7 +113,7 @@ On va commencer par ajouter des réplicas à notre application.
 Puis lancer un changement de version.
 ```bash
 $ docker service scale mon-app_web=7  
-$ docker service update --image zaggash/demo-webapp:v1 mon-app_web
+$ docker service update --image ghcr.io/zaggash/demo-webapp:v1 mon-app_web
 ```
 
 Vous pouvez lancer `docker events` sur un autre shell sur `node1`.  
@@ -134,7 +134,7 @@ On peut les retrouver dans le `docker inspect mon-app_web`
 Dans une stack, ces changements sont représentés par ceci
 ```yaml
 [...]
-    image: zaggash/demo-webapp:v2
+    image: ghcr.io/zaggash/demo-webapp:v2
 [...]
     deploy:
     replicas: 10
@@ -177,7 +177,7 @@ On peut définir le healthcheck:
 * Dans une stack
 ```yaml
 www:
-  image: zaggash/demo-webapp:v1
+  image: ghcr.io/zaggash/demo-webapp:v1
   healthcheck:
     test: "curl -f https://localhost/ || false"
     timeout: 3s

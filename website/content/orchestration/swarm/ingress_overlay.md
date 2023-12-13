@@ -32,7 +32,7 @@ $ docker network create --driver overlay --subnet 10.10.10.0/24 mon-overlay-demo
 Puis exécuter un serveur web simple exposé en dehors du cluster sur le port 8080.  
 Ce service aura 3 réplicas et sera attaché à notre overlay `mon-overlay-demo`  
 ```bash
-$ docker service create --name webapp --replicas=3 --network my-overlay-network -p 8080:80 zaggash/demo-webapp
+$ docker service create --name webapp --replicas=3 --network my-overlay-network -p 8080:80 ghcr.io/zaggash/demo-webapp
 ```  
 
 Relever l'ID du conteneur qui tourne sur notre noeud actuelle normalement `node1`
@@ -85,9 +85,9 @@ On le vérifie:
 ```bash
 $ docker service ps webapp
 ID                  NAME                IMAGE                        NODE                DESIRED STATE       CURRENT STATE            ERROR               PORTS
-9yrr2kdwc6t5        webapp.1            zaggash/demo-webapp:latest   node1               Running             Running 37 minutes ago
-4qyritdeuwhx        webapp.2            zaggash/demo-webapp:latest   node3               Running             Running 36 minutes ago
-eiqh6znlcvus        webapp.3            zaggash/demo-webapp:latest   node2               Running             Running 36 minutes ago
+9yrr2kdwc6t5        webapp.1            ghcr.io/zaggash/demo-webapp:latest   node1               Running             Running 37 minutes ago
+4qyritdeuwhx        webapp.2            ghcr.io/zaggash/demo-webapp:latest   node3               Running             Running 36 minutes ago
+eiqh6znlcvus        webapp.3            ghcr.io/zaggash/demo-webapp:latest   node2               Running             Running 36 minutes ago
 ```  
 
 Se connecter maintenant sur le `node2` et essayé de ping le conteneur qui est sur le `node1`  
@@ -142,10 +142,10 @@ Répétons les étapes précédentes en utilisant un overlay crypté.
 (node1) | $ docker service rm webapp
 (node1) | $ docker network rm mon-overlay-demo
 (node1) | $ docker network create --driver overlay --opt encrypted --subnet 10.20.20.0/24 mon-overlay-ipsec
-(node1) | $ docker service create --name webapp --replicas=3 --network mon-overlay-ipsec -p 8080:80 zaggash/demo-webapp
+(node1) | $ docker service create --name webapp --replicas=3 --network mon-overlay-ipsec -p 8080:80 ghcr.io/zaggash/demo-webapp
 (node1) | $ docker ps 
 CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS               NAMES
-1efc497c5983        zaggash/demo-webapp:latest   "/docker-entrypoint.…"   17 seconds ago      Up 13 seconds       80/tcp              webapp.1.ptfs32hrkcom2nu7syry31bwb
+1efc497c5983        ghcr.io/zaggash/demo-webapp:latest   "/docker-entrypoint.…"   17 seconds ago      Up 13 seconds       80/tcp              webapp.1.ptfs32hrkcom2nu7syry31bwb
 
 (node1) | $ docker inspect 1efc497c5983 | grep IPv4Address
                         "IPv4Address": "10.0.0.26"

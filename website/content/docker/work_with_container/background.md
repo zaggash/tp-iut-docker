@@ -9,7 +9,7 @@ draft: false
 
 Nous allons lancer un conteneur tout simple qui affiche des nombres aléatoires chaque seconde.
 ```bash
-$ docker run zaggash/random
+$ docker run ghcr.io/zaggash/random
 23008
 19194
 17802
@@ -25,7 +25,7 @@ $ docker run zaggash/random
 
 Nous pouvons lancer ce conteneur de la meme manière mais en arrière plan avec l'option `-d`
 ```bash
-$ docker run -d zaggash/random
+$ docker run -d ghcr.io/zaggash/random
 a5a20f1f8897d6b7a7644a322141ad74a3c21e28530b11cf10ef583ba539e55c
 ```
 
@@ -59,7 +59,7 @@ Verifier les conteneurs en cours d'execution avec la commande `docker ps`
 ```bash
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
-a5a20f1f8897        zaggash/random      "/bin/sh -c 'while e…"   5 minutes ago       Up 5 minutes                            crazy_khorana
+a5a20f1f8897        ghcr.io/zaggash/random      "/bin/sh -c 'while e…"   5 minutes ago       Up 5 minutes                            crazy_khorana
 ```
 
 L'API nous retourne:
@@ -162,7 +162,7 @@ Nous voyons ici que les conteneurs ont été arrêtés immediatement.
 $ docker ps -a
 docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                           PORTS               NAMES
-eaf444d185be        zaggash/random      "/bin/sh -c 'while e…"   29 minutes ago      Exited (137) 3 minutes ago                           friendly_chatelet
-aaeb4643ae39        zaggash/random      "/bin/sh -c 'while e…"   29 minutes ago      Exited (137) 3 minutes ago                           recursing_dirac
-a5a20f1f8897        zaggash/random      "/bin/sh -c 'while e…"   44 minutes ago      Exited (137) 8 minutes ago                           crazy_khorana
+eaf444d185be        ghcr.io/zaggash/random      "/bin/sh -c 'while e…"   29 minutes ago      Exited (137) 3 minutes ago                           friendly_chatelet
+aaeb4643ae39        ghcr.io/zaggash/random      "/bin/sh -c 'while e…"   29 minutes ago      Exited (137) 3 minutes ago                           recursing_dirac
+a5a20f1f8897        ghcr.io/zaggash/random      "/bin/sh -c 'while e…"   44 minutes ago      Exited (137) 8 minutes ago                           crazy_khorana
 ```

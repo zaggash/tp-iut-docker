@@ -21,7 +21,7 @@ Ce sont généralement des images de tiers reconnues.
 
 
 * Les images d'utilisateurs (ou d'organisations)  
-`zaggash/random`
+`ghcr.io/zaggash/random`
 
 L'espace de nom utilisateur contient les images des utilisateurs ou organisations.  
 ***zaggash*** est l'utilisateur dockerhub.  
@@ -36,13 +36,13 @@ Puis on retrouve la même logique que précédemment.
 ### Les tags
 Vous avez peut être déjà remarqué mais les images ont un ***tag*** de version associé à leur nom, le tag par défaut est ***latest***  
 ```bash
-$ docker pull zaggash/random
+$ docker pull ghcr.io/zaggash/random
 Using default tag: latest
-latest: Pulling from zaggash/random
+latest: Pulling from ghcr.io/zaggash/random
 76df9210b28c: Pull complete
 Digest: sha256:f1eb69bbb25b4f0b88d2edfe1d5837636c9e5ffaad0e96a11c047005a882f049
-Status: Downloaded newer image for zaggash/random:latest
-docker.io/zaggash/random:latest
+Status: Downloaded newer image for ghcr.io/zaggash/random:latest
+docker.io/ghcr.io/zaggash/random:latest
 ```
 
 Le tag defini une variante, la version d'une image.  

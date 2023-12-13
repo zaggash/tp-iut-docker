@@ -26,7 +26,7 @@ Les volumes seront abordés un peu plus tard dans les chapitres.
 
 ### Démo
 
-- Lancer 5 conteneurs avec l'image utilisée précédemment `zaggash/random`
+- Lancer 5 conteneurs avec l'image utilisée précédemment `ghcr.io/zaggash/random`
 - Chercher les IDs des conteneurs fraîchement démarrés.  
   
 
