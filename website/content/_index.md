@@ -4,8 +4,6 @@ date: 2020-06-08T23:48:04+02:00
 draft: false
 ---
 
-# Home
-
 Ceci est un TP afin de découvrir **Docker**, les **conteneurs** et l'**orchestration** de conteneur.  
 J'ai essayé de mettre le plus d'informations possible dans les chapitres.  
 N'hésitez à m'interpeller si vous rencontrez un problème, une erreur, ou avez besoin de plus d'explications.  

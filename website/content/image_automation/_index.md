@@ -6,8 +6,5 @@ chapter = true
 pre = "<b>3. </b>"
 +++
 
-### Chapter 3
-
-# L'automatisation de la création d'une image
 
 Dans ce chapître, nous allons utiliser les *Dockerfile*, puis faire un tour d'horizon du *DockerHub*.

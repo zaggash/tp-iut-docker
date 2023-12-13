@@ -6,10 +6,6 @@ chapter = true
 pre = "<b>1. </b>"
 +++
 
-### Partie 1
-
-# Introduction
-
 Introduction à docker et au concept de conteneurs.  
 On ne lancera pas (tout de suite) de conteneur dans ce chapitre !
 

@@ -6,10 +6,6 @@ chapter = true
 pre = "<b>5. </b>"
 +++
 
-### Chapter 5
-
-# Orchestration
-
 Cette partie met en oeuvre l'ensemble de la stack de Docker.  
 Nous allons utiliser docker-compose dans un premier temps.
 Puis mettre en oeuvre un cluster Swarm.

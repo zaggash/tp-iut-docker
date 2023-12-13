@@ -6,9 +6,5 @@ chapter = true
 pre = "<b>2. </b>"
 +++
 
-### Partie 2
-
-# Docker
-
 Dans ce chapitre nous allons voir plusieurs types de conteneur.  
 Puis en apprendre un peu plus sur leurs fonctionnements.

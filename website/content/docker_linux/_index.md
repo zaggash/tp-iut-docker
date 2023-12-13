@@ -6,8 +6,5 @@ chapter = true
 pre = "<b>4. </b>"
 +++
 
-### Chapter 4
-
-# Docker et Linux
 
 Dans cette partie, nous allons voir comment Docker s'intègre avec linux au niveau réseau puis la gestion des volumes.
