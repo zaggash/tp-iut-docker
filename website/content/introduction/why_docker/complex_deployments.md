@@ -5,7 +5,7 @@ date: 2020-06-08T23:09:18+02:00
 weight: 2
 draft: false
 ---
-![Matrice de l'enfer](/images/shipping-matrix-from-hell.png?featherlight=false&width=40pc)
+![Matrice de l'enfer](/images/shipping-matrix-from-hell.png?lightbox=false&width=40pc)
 
 Les deploiements deviennent de plus en plus compliqués, voici quelques exemples.
 

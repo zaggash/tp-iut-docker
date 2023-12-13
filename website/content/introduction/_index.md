@@ -13,4 +13,4 @@ pre = "<b>1. </b>"
 Introduction à docker et au concept de conteneurs.  
 On ne lancera pas (tout de suite) de conteneur dans ce chapitre !
 
-![Sweat](/images/sweat_meme.jpg?featherlight=false&width=40pc)
+![Sweat](/images/sweat_meme.jpg?lightbox=false&width=40pc)

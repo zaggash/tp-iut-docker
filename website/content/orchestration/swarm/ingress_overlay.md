@@ -128,7 +128,7 @@ IP 10.10.10.24 > 10.10.10.26: ICMP echo reply, id 25411, seq 36, length 64
 On peut voir dans les trames ci-dessus, que le premier est le paquet du tunnel VXLAN UDP entre les hôtes dans le port 4789.  
 Et à l'intérieur, on voit le paquet ICMP entre les conteneurs.  
 
-![vxlan](/images/vxlan.png?featherlight=false&width=55pc)  
+![vxlan](/images/vxlan.png?lightbox=false&width=55pc)  
 
 
 ### Encryption
@@ -175,7 +175,7 @@ Ils sont dans un conteneur séparé que Docker lance pour chaque réseau overlay
 Pour inspecter ces interfaces, nous devons utiliser nsenter pour accèder à leur namespace. 
 
 
-![vxlan_vtep](/images/vtep_vxlan.jpg?featherlight=false&width=40pc)  
+![vxlan_vtep](/images/vtep_vxlan.jpg?lightbox=false&width=40pc)  
 
 
 Déjà voyons les interfaces de notre conteneur, nous en avons des nouveau depuis le test du tunnel IPsec:

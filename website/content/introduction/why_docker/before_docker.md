@@ -15,4 +15,4 @@ Ce qui rend les environnements certaines fois non fiable.
 Les Ops et Dev n'ont pas forcement une manière simple de partager les applications.  
 Les environnements varient ce qui crée des lenteurs et des frictions entre Dev et Ops.
 
-![DevVsOps](/images/meme_dev_vs_ops.jpg?featherlight=false&width=40pc)
+![DevVsOps](/images/meme_dev_vs_ops.jpg?lightbox=false&width=40pc)

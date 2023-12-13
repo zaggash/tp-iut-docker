@@ -15,7 +15,7 @@ $ git clone https://github.com/zaggash/tp-iut-docker.git
 $ cd tp-iut-docker/
 $ cd dockercoins/
 ```
-![Architecture](/images/dockercoins-diagram.svg?featherlight=false&width=30pc)
+![Architecture](/images/dockercoins-diagram.svg?lightbox=false&width=30pc)
 
 On ne va pas rentrer dans trop de details concernant la syntaxe d'un `docker-compose.yaml`.  
 Cela prendrait beaucoup de temps et [la documentation de Docker](https://docs.docker.com/compose/compose-file/) est un bien meilleur référentiel avec un tas d'exemples et d'explications.  

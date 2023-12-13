@@ -21,7 +21,7 @@ defaultContentLanguage = "fr"
   # See the config.toml file from this documentation site to have an example.
   editURL = ""
   # Author of the site, will be used in meta information
-  author = "Alexandre P."
+  author.name = "Alexandre P."
   # Description of the site, will be used in meta information
   description = "TP Licence - Intro aux conteneurs"
   # Shows a checkmark for visited pages on the menu
@@ -100,7 +100,7 @@ defaultContentLanguage = "fr"
 
 
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "RSS", "SEARCH"]
 
 [[menu.shortcuts]]
 name = '<i class="fas fa-book"></i> Documentation Docker'

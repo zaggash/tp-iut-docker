@@ -13,4 +13,4 @@ De la même maniere, il est désormais très simple de revenir à une version pr
 
 
 
-![DevVsOps](/images/meme_docker_is_born.jpg?featherlight=false&width=25pc)
+![DevVsOps](/images/meme_docker_is_born.jpg?lightbox=false&width=25pc)

@@ -18,4 +18,4 @@ draft: false
  - Environnement multiple
  - Besoin de scalabilité rapide
 
-![DockerVersusVMs](/images/shipping-software-problems.png?featherlight=false&width=50pc)
+![DockerVersusVMs](/images/shipping-software-problems.png?lightbox=false&width=50pc)

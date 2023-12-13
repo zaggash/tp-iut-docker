@@ -85,7 +85,7 @@ Pendant l'initialisation du service, on peut voir plusieurs etapes.
 
 Quand une task est arrêtée, elle ne peut pas être redémarrée, une nouvelle sera créée à sa place.  
 
-![Services](/images/service-lifecycle.png?featherlight=false&width=40pc)  
+![Services](/images/service-lifecycle.png?lightbox=false&width=40pc)  
 
 
 On peut tester notre service, il écoute sur le port 9200 des noeuds du cluster.
@@ -103,7 +103,7 @@ done
 Le trafic est géré par le `routing mesh`.  
 Chaque requête est delivrée par une des instances de notre service en Round Robin.  
 
-![Mesh](/images/routing-mesh.png?featherlight=false&width=40pc)  
+![Mesh](/images/routing-mesh.png?lightbox=false&width=40pc)  
 
 {{% notice tip %}}
 Le LoadBalancing est opérée par IPVS, chaque noeud à donc son LoadBalancer.  

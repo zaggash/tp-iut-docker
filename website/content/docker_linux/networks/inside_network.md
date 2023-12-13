@@ -26,7 +26,7 @@ Nous reviendrons sur celui-ci un peu plus tard.
 
 ### Un réseau, deux conteneurs 
 
-![Single Network Diagram](/images/bridge2.png?featherlight=false&width=40pc)  
+![Single Network Diagram](/images/bridge2.png?lightbox=false&width=40pc)  
 
 Créer un réseau `devops`
 ```bash
@@ -47,7 +47,7 @@ $ docker run -ti --net devops alpine sh
 ```  
 
 
-![Magic](/images/magic.gif?featherlight=false&width=20pc)
+![Magic](/images/magic.gif?lightbox=false&width=20pc)
 
 ---
 

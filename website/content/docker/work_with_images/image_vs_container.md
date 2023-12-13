@@ -10,13 +10,13 @@ draft: false
 Une image est un système de fichiers en ***lecture seule***  
 Un conteneur est processus qui s'execute dans une ***copie*** de ce système de fichiers.
 
-![Containers Layers](/images/container-layers.jpg?featherlight=false&width=28pc)
+![Containers Layers](/images/container-layers.jpg?lightbox=false&width=28pc)
 
 
 Pour accélérer le démarrage et optimiser les accès disque, plutôt que de copier l'image entière, on utilise ici du Copy-On-Write.  
 Plusieurs conteneurs peuvent donc utiliser la même image sans dupliquer les données.
 
-![Shared Layers](/images/image_layers_sharing.png?featherlight=false&height=10pc)
+![Shared Layers](/images/image_layers_sharing.png?lightbox=false&height=10pc)
 
 Si une image est en **lecture seule**, on ne modifie pas une image, on en crée une **nouvelle**.
 

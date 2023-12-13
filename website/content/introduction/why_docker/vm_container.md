@@ -21,4 +21,4 @@ Il n'y a pas de vérité, tout est une question de besoin !
 | Isolation complète, donc plus sécrisée | Isolation au niveau du processus, potentiellement moins sécurisée |
 
 
-![docker_vm](/images/docker_stack.jpg?featherlight=false)
+![docker_vm](/images/docker_stack.jpg?lightbox=false)

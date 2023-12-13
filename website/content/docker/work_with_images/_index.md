@@ -18,4 +18,4 @@ Les images sont en fait une superposition de couches appelées **layers**
 Chaque layer **ajoute**, **modifie** ou **supprime** un fichier et/ou une metadata.  
 Les images peuvent partager des layers, ce qui permet d'optimiser l'utilisation de l'espace disque, les transferts réseaux
 
-![Image Layers](/images/image_layers.png?featherlight=false&width=25pc)
+![Image Layers](/images/image_layers.png?lightbox=false&width=25pc)

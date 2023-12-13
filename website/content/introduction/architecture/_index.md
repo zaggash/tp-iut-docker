@@ -15,4 +15,4 @@ Il y a le Docker Engine et la CLI.
 - Il est également possible d'utiliser un Socket TCP avec authentification TLS.
 - Le Docker CLI communique avec le daemon via cette Socket.
 
-![architecture](/images/docker-engine-architecture.svg?featherlight=false&width=50pc)
+![architecture](/images/docker-engine-architecture.svg?lightbox=false&width=50pc)

@@ -14,7 +14,7 @@ Le Docker Engine est divisé en plusieurs parties.
 
 Plusieurs fonctionnalitées sont progressivement deleguées du ***Docker Engine*** à ***containerd***
 
-![architecture](/images/engine_architecture.png?featherlight=false&width=50pc)
+![architecture](/images/engine_architecture.png?lightbox=false&width=50pc)
 
 {{% notice style="info" %}}
 Des exercices du TP permettrons de verifier cela après l'installation

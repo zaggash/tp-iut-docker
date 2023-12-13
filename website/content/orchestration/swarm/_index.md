@@ -28,7 +28,7 @@ Swarmkit intègre egalement directement le Load-Balancing des services et les r�
 - Les workers recoivent les instructions de la part des managers  
 - Il est conseillé d'éxécuter le workload sur les workers, bien que les managers peuvent aussi s'en charger. 
 
-![Swarm](/images/swarm-diagram.png?featherlight=false&width=40pc)
+![Swarm](/images/swarm-diagram.png?lightbox=false&width=40pc)
 
 
 * Les managers exposent l'API de Swarm  
@@ -38,4 +38,4 @@ Swarmkit intègre egalement directement le Load-Balancing des services et les r�
 * Une **tasks** corresponds à un conteneur **assigné** à un noeud  
 * Les **noeuds** connaissent leurs **tasks** et sont chargé de les démarrer ou les arrêter en conséquence.
 
-![Services](/images/services-diagram.png?featherlight=false&width=30pc)
+![Services](/images/services-diagram.png?lightbox=false&width=30pc)
