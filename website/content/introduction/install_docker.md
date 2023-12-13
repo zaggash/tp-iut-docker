@@ -35,9 +35,20 @@ $ sudo apt-get install -y bridge-utils jq git httping
 La procédure d'installation est bien detaillée sur le site de Docker.  
 [Installer Docker sur Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
+Afin d'eviter d'atteindre [la limite de telechargements](https://docs.docker.com/docker-hub/download-rate-limit/) de certaines images du DockerHub, il nous faut ajouter un cache.  
+Modifier le fichier /etc/docker/daemon.json et ajouter la valeur `registry-mirrors`, afin de rendre le changement permanent.  
+
+```yaml  
+{
+  "registry-mirrors": ["https://<my-docker-mirror-host>"]
+}
+```  
+
+Enregistrer le ficher et redemarrer le daemon Docker afin d'appliquer le changement.  
+
 
 TLDR:  
-```bash
+```bash  
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
