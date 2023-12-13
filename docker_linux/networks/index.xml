@@ -4,7 +4,7 @@ Cette interface est fournie par une paire de veth.
 Elle est connectée au Bridge Docker appelé docker0 par defaut.
 Les adresses sont allouées dans un réseau privé interne 172.17.0.0/16 par défault.
 Le trafic sortant passe par une régle iptables MASQUERADE, puis le trafic entrant et naté par DNAT.</description></item><item><title>Dans le Réseau</title><link>https://zaggash.github.io/tp-iut-docker/docker_linux/networks/inside_network/</link><pubDate>Fri, 12 Jun 2020 23:23:40 +0200</pubDate><guid>https://zaggash.github.io/tp-iut-docker/docker_linux/networks/inside_network/</guid><description>On peut lister les réseaux avec docker network ls
-$ docker network ls NETWORK ID NAME DRIVER SCOPE a5fa804dcca5 bridge bridge local a5a200b4762b host host local b35f65ab844b none null local On peut considérer un réseau comme un Virtual Switch.
+$ docker network ls NETWORK ID NAME DRIVER SCOPE a5fa804dcca5 bridge bridge local a5a200b4762b host host local b35f65ab844b none null localOn peut considérer un réseau comme un Virtual Switch.
 Docker va lui assigner automatiquement un sous-réseau puis une IP aux conteneurs associés.
 Les conteneurs peuvent faire partis de plusieurs réseaux à la fois.
 Les noms des conteneurs sont résolus via un serveur DNS embarqué dans le Docker daemon.</description></item></channel></rss>
